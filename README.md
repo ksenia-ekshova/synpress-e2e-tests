@@ -10,7 +10,7 @@ This project contains an example of test framework for e2e testing of a smart co
 
 ## Local installation
 
-- Make sure you have Node.js and npm installed. [Node.js and npm download link](https://nodejs.org/en/download/).
+- Make sure you have Node.js and npm installed [Node.js and npm download link](https://nodejs.org/en/download/).
 - Make sure you have correct wersion of chromium or use command:
 ```bash
   $ npx playwright install chromium
