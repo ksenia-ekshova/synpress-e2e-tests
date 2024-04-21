@@ -1,0 +1,7 @@
+node_modules
+downloads
+metamask-*
+test-results
+playwright-report
+.github
+ignored
