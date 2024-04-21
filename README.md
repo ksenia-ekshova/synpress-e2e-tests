@@ -5,7 +5,7 @@ This project contains an example of test framework for e2e testing of a smart co
 - Based on Playwright and [Synpress](https://github.com/Synthetixio/synpress) as plugin for working with metamask extension
 - Code style with ESLint and Prettier 
 - GitHub CI Actions
-- Preconditions: creating a new wallet for NFT recipient (with ethers.js).
+- Preconditions: creating a new wallet for NFT recipient (with ethers.js)
 - Report is generated with every test run
 
 ## Local installation
@@ -87,7 +87,7 @@ https://mumbai.polygonscan.com/address/0x54EEDe47850fE932f5466B6fa708bf117637196
 
 ## Github Actions
 
-The project is configured to use Github Actions. The configuration file is `.github/workflows/actions.yml`.
+The project is configured to use Github Actions. The configuration file is `.github/workflows/actions.yml`
 Environment variables are set via Secrets
 Image for Manual workflow sets via Githun Actions => Manual Workflow => Run Workflow
 

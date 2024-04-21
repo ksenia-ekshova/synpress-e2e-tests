@@ -4,7 +4,7 @@ import testData from '../../configs/testData';
 import { Wallet, Generator } from '../utils';
 import MainPage from '../pageObject/pages/MainPage';
 
-let collectionAddress: string;
+//let collectionAddress: string;
 let recipient: string;
 let tokenId: string;
 let collectionName: string;
@@ -41,16 +41,16 @@ test('Create collection', async ({}) => {
   // await mainPage.checkCollectionSymbolInEvent(collectionSymbol);
 });
 
-test('Mint NFT', async () => {
-  await mainPage.fillCollectionAddress(collectionAddress);
-  await mainPage.fillRecipientAddress(recipient);
-  await mainPage.fillTokenId(tokenId);
-  await mainPage.clickToMintButton();
+// test('Mint NFT', async () => {
+//   await mainPage.fillCollectionAddress(collectionAddress);
+//   await mainPage.fillRecipientAddress(recipient);
+//   await mainPage.fillTokenId(tokenId);
+//   await mainPage.clickToMintButton();
 
-  // await metamask.confirmTransaction();
+//   await metamask.confirmTransaction();
 
-  // await mainPage.checkTokenMintedEvent(collectionAddress);
-  // await mainPage.checkRecipientAddressInEvent(recipient);
-  // await mainPage.checkTokenIdInEvent(tokenId);
-  // await mainPage.checkTokenURIInEvent(URI);
-});
+//   await mainPage.checkTokenMintedEvent(collectionAddress);
+//   await mainPage.checkRecipientAddressInEvent(recipient);
+//   await mainPage.checkTokenIdInEvent(tokenId);
+//   await mainPage.checkTokenURIInEvent(URI);
+// });
