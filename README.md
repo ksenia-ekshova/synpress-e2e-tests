@@ -13,40 +13,40 @@ This project contains an example of test framework for e2e testing of a smart co
 - Make sure you have Node.js and npm installed. [Node.js and npm download link](https://nodejs.org/en/download/).
 - Make sure you have correct wersion of chromium or use command:
 ```bash
-  $ npx playwright install chromium
+    npx playwright install chromium
 ```
 
 1. Clone the repository and install dependencies using npm:
 
 ```bash
-`git clone https://github.com/ksenia-ekshova/synpress-e2e-tests.git"
-`cd synpress-e2e-tests`
+    git clone https://github.com/ksenia-ekshova/synpress-e2e-tests.git
+    cd synpress-e2e-tests
 ```
 
 2. Install dependencies:
 
 ```bash
-- `npm install`
+    npm install
 ```
 
 3. Deploy Frontend and Backeng images of Test Application with Docker using the following commands:
 
 ```bash
-    $ docker pull evercoinx/faraway:nft-collection-deployer-frontend
-    $ docker pull evercoinx/faraway:nft-collection-deployer-backend
+    docker pull evercoinx/faraway:nft-collection-deployer-frontend
+    docker pull evercoinx/faraway:nft-collection-deployer-backend
 ```
 
 2. Check the pulled images with:
 
 ```bash
-$ docker images
+    docker images
 ```
 
 3. Run the containers. Replace <Backend Image ID> and <Frontend Image ID> with the respective values got from the previous step.
 
 ```bash
-$ docker run -p 4000:4000 <Backend Image ID>
-$ docker run -p 3000:3000 <Frontend Image ID>
+    docker run -p 4000:4000 <Backend Image ID>
+    docker run -p 3000:3000 <Frontend Image ID>
 ```
 
 3. Fill .env file with your data (METAMASK_SECRET_WORDS or PRIVATE_KEY are manadaroty)
@@ -54,7 +54,7 @@ $ docker run -p 3000:3000 <Frontend Image ID>
 4. Run tests:
 
 ```bash
-- `npm test`
+    npm test
 ```
 - headless mode:
 add 'HEADLESS_MODE=1' to .env
@@ -62,13 +62,13 @@ add 'HEADLESS_MODE=1' to .env
 - debug mode:
 
 ```bash
-- `npm test:debug`
+    npm test:debug
 ```
 
 5. Generate report:
 
 ```bash
-- `npx playwright show-report`
+    npx playwright show-report
 ```
 
 ## Task
@@ -85,17 +85,17 @@ https://mumbai.polygonscan.com/address/0x54EEDe47850fE932f5466B6fa708bf117637196
 - Requirements for the solution
   The solution must be submitted as a project on GitHub with a configured action for manual execution. The addresses of the images must be included in the action parameters for verification.
 
-# Github Actions
+## Github Actions
 
 The project is configured to use Github Actions. The configuration file is `.github/workflows/actions.yml`.
 Environment variables are set via Secrets
 Image for Manual workflow sets via Githun Actions => Manual Workflow => Run Workflow
 
-## Dev notes (Static Code Analysis)
+## Static Code Analysis
 
 1. Run manually:
 ```bash
-$ npm run eslint
-$ npm run prettier
+    npm run eslint
+    npm run prettier
 ```
 2. Automatic check on every commit
