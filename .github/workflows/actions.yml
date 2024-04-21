@@ -1,4 +1,4 @@
-name: Manual workflow
+name: Manual Flow
 on:
   workflow_dispatch:
     inputs:
@@ -16,7 +16,6 @@ jobs:
     name: Tests
     runs-on: macos-latest
     env:
-      RETRIES: ${{ inputs.retries }}
       PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       METAMASK_SECRET_WORDS: ${{ secrets.METAMASK_SECRET_WORDS }}
       METAMASK_PASSWORD: ${{ secrets.METAMASK_PASSWORD }}
@@ -30,10 +29,12 @@ jobs:
         run: |
           npm install
           npx playwright install chromium
+
       - name: Setup Docker
         run: |
           brew install docker
           colima start
+
       - name: Run Application
         run: |
           docker pull ${{ github.event.inputs.backend_image }}
@@ -41,8 +42,10 @@ jobs:
           docker pull ${{ github.event.inputs.frontend_image }}
           docker run -d -p 3000:3000 ${{ github.event.inputs.frontend_image }}
           sleep 10
+
       - name: Run Tests
         run: npm run test
+
       - uses: actions/upload-artifact@v3
         if: always()
         with:

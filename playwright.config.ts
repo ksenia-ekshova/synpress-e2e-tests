@@ -12,7 +12,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     //actionTimeout: 1000,
-    //screenshot: 'only-on-failure',
+    screenshot: 'only-on-failure',
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
     headless: false,
